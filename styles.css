@@ -20,6 +20,7 @@
     --color-theme-card-03-hex: #26241e;
     --color-theme-card-04-hex: #2b2923;
     --color-theme-card-hover-hex: #201e18;
+    --color-soft: color-mix(in oklab, var(--color-theme-fg)60%, transparent);
 }
 
 * {
@@ -72,6 +73,7 @@ header {
     font-size: 16px;
     font-weight: 400;
     margin-left: -1px;
+    margin-right: 40px;
 }
 
 .nav__left__logo {
@@ -86,6 +88,10 @@ header {
     text-decoration: none;
 }
 
+.nav__center a:hover {
+    color: var(--color-soft);
+}
+
 .nav__right .btn {
     box-shadow: none;
     padding: 5px 10px;
@@ -94,17 +100,29 @@ header {
     font-size: 14px;
 }
 
+
+
 .btn-primary {
     background: var(--color-theme-bg);
     color: var(--color-theme-fg);
     border: 1px solid var(--color-theme-card-04-hex);
     margin-right: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--color-theme-card-04-hex);
 }
 
 .btn-secondary {
     background: var(--color-theme-fg);
     color: var(--color-theme-bg);
     margin-right: 4px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: var(--color-theme-fg-02);
 }
 
 .p-20 {
@@ -128,12 +146,17 @@ header {
     padding: 13px 21px;
     display: flex;
     gap: 2px;
+    cursor: pointer;
 
     img {
         width: 16px;
         font-weight: 400;
         line-height: 1;
     }
+}
+
+.hero__cta:hover {
+    background: var(--color-theme-fg-02);
 }
 
 .hero__img {
@@ -224,6 +247,10 @@ header {
     color: #f54e00;
 }
 
+.card__item1 a:hover {
+    color: #cf4200;
+}
+
 .card__item2 {
     flex: 1;
 }
@@ -254,7 +281,7 @@ header {
     padding: 16px 18px;
     display: flex;
     flex-direction: column;
-    height: 278px;
+    height: 240px;
     background-color: var(--color-theme-card-hex);
     border-radius: 4px;
 }
@@ -285,7 +312,7 @@ header {
 
 
 .commenter__details>p:nth-of-type(2) {
-    color: color-mix(in oklab, var(--color-theme-fg)60%, transparent);
+    color: var(--color-soft);
 }
 
 .features {
@@ -322,7 +349,7 @@ header {
 }
 
 .features__grid__card__item1>p:nth-of-type(2) {
-    color: color-mix(in oklab, var(--color-theme-fg)60%, transparent);
+    color: var(--color-soft);
 }
 
 .features__grid__card__item1 div {
@@ -333,6 +360,10 @@ header {
     font-size: 16px;
     text-decoration: none;
     color: #f54e00;
+}
+
+.features__grid__card__item1 div a:hover {
+    color: #cf4200;
 }
 
 .features__grid__card__item2 {
@@ -376,7 +407,7 @@ header {
 .button-list li span {
     font-size: 12px;
     margin-left: 10px;
-    color: color-mix(in oklab, var(--color-theme-fg)60%, transparent);
+    color: var(--color-soft);
 }
 
 .button-list li .button-list-item-left {
@@ -419,7 +450,7 @@ header {
 }
 
 .changelog__grid .card>p:nth-of-type(1) {
-    color: color-mix(in oklab, var(--color-theme-fg)60%, transparent);
+    color: var(--color-soft);
 }
 
 .changelog__grid .card>p:nth-of-type(1) span {
@@ -436,6 +467,10 @@ header {
     color: #f54e00;
     align-self: flex-start;
     text-align: left;
+}
+
+.changelog a:hover {
+    color: #cf4200;
 }
 
 .joinus {
@@ -493,6 +528,10 @@ header {
     padding: 16px;
 }
 
+.recent__item2--card:hover {
+    background-color: var(--color-theme-card-04-hex);
+}
+
 .recent__item2--card div {
     flex: 1;
 }
@@ -504,10 +543,13 @@ header {
     color: #f54e00;
 }
 
+.recent__item2 a:hover {
+    color: #cf4200;
+}
 
 .recent__item2--card div>p:last-of-type,
 .recent__item2--card>p {
-    color: color-mix(in oklab, var(--color-theme-fg)60%, transparent);
+    color: var(--color-soft);
     letter-spacing: 0.08px;
     margin-top: 1px;
 }
@@ -527,6 +569,113 @@ header {
 }
 
 footer {
-    height: 425px;
+    height: 465px;
     background-color: var(--color-theme-card-hex);
+    padding: 67px 20px;
+}
+
+
+footer .nav {
+    display: flex;
+    height: 100%;
+}
+
+.nav ul {
+    list-style-type: none;
+    width: 252px;
+}
+
+.nav ul li {
+    padding: 5px 0;
+    font-size: 0.875rem;
+}
+
+.footer__end {
+    background: inherit;
+    margin: 0 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__end--item1,
+.footer__end--item2 {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-soft);
+}
+
+.controls-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #2a2a2a;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-buttons {
+    display: flex;
+    gap: 10px;
+    background: #1f1f1f;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.theme-btn {
+    font-size: 0.875rem;
+    background: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    color: #a0a0a0;
+}
+
+.theme-btn:hover {
+    background: #3a3a3a;
+}
+
+.theme-btn.active {
+    background: #3a3a3a;
+    color: #ffffff;
+}
+
+.language-btn {
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s ease;
+    font-weight: 200;
+}
+
+.language-btn:hover {
+    background: #3a3a3a;
+}
+
+.globe-icon {
+    font-size: 16px;
+}
+
+.dropdown-arrow {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.desc {
+    color: var(--color-soft);
 }
